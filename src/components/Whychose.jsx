@@ -1,16 +1,16 @@
 import React from "react";
-import "./WhyChose.css"; 
+import './Whychose.css';
 
-const WhyChoose = () => {
+const WhyChoose = () => { 
   return (
     <div className="why-ait-wrapper">
       <div id="text_1">
-        <h3>Ինչու ընտրել AIT-ն</h3>
+        <h3>Ինչու՞ ընտրել AIT-ն</h3>
       </div>
       <div id="grid">
         <div>
           <h2>900+</h2>
-          <p>Ուսանող Արարատի և Երևանի մասնաճյուղերում</p>
+          <p>Ուսանող Արարատի և Վեդիի մասնաճյուղերում</p>
         </div>
         <div>
           <h2>84%</h2>
@@ -22,7 +22,7 @@ const WhyChoose = () => {
         </div>
         <div>
           <h2>8-12</h2>
-          <p>Խմբային դասընթացների մասնակցի քանակը</p>
+          <p>Խմբային դասընթացների մասնակիցների քանակը</p>
         </div>
       </div>
     </div>

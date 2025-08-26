@@ -1,11 +1,10 @@
 import React from "react";
 import "./Mission.css";
-
 import image1 from "../assets/building.png";
 import image2 from "../assets/classroom.png";
 import image3 from "../assets/students.png";
-import icon10of10 from "../assets/icon-10-of-10.svg"; // Ձեր 10/10 icon-ի ֆայլը
-import iconArrow from "../assets/icon-arrow.svg";     // Ձեր սլաքով icon-ի ֆայլը
+import icon10of10 from "../assets/icon-10-of-10.svg"; 
+import iconArrow from "../assets/icon-arrow.svg";     
 
 const Mission = () => {
   return (

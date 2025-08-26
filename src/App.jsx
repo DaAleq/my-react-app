@@ -1,53 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import JoinCTA from "./components/Join.jsx";
-import MainSection from "./components/MainSection.jsx";
-import Mission from "./components/Mission.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header.jsx";
-import CoursesPage from "./components/pages/CoursesPage.jsx";
 import Footer from "./components/Footer.jsx";
-import WhyChoose from "./components/Whychose.jsx";
-import Courses from "./components/Courses.jsx";
-import Certificate from "./components/Certificate.jsx";
-import Contact from "./components/Contact.jsx";
-import PrivacyPolicy from "./components/pages/PrivacyPolicy.jsx";
-import ContactPage from "./components/pages/ContactPage.jsx";
-import FantasySpace from "./components/pages/FantasySpace.jsx";
-import AboutUs from "./components/pages/AboutUs.jsx"
+import HomePage from "./pages/HomePage.jsx";
+import CoursesPage from "./pages/CoursesPage.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
+import FantasySpace from "./pages/FantasySpace.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import ShopPage from "./pages/ShopPage.jsx";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("main");
-
-  const handleNavigate = (page) => {
-    setCurrentPage(page);
-  };
-
   return (
-    <>
-      <Header onNavigate={handleNavigate} />
-
-      <main>
-        {currentPage === "main" && (
-          <>
-            <MainSection />
-            <WhyChoose />
-            <Courses />
-            <Mission />
-            <JoinCTA />
-            <Certificate />
-            <Contact />
-          </>
-        )}
-
-        {currentPage === "courses" && <CoursesPage />}
-        {currentPage === "policy" && <PrivacyPolicy />}
-        {currentPage === "contact" && <ContactPage />}
-        {currentPage === "fantasy" && <FantasySpace />}
-        {currentPage === "AboutUS" && <AboutUs />}
-      </main>
-
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/courses" element={<CoursesPage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/fantasy-space" element={<FantasySpace />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/shop" element={<ShopPage />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

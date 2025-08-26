@@ -15,9 +15,14 @@
   margin: 0 auto;
 }
 
+.footer-logo {
+  max-width: 250px; /* Added for better responsiveness */
+}
+
 .footer-logo img {
   width: 140px;
   height: auto;
+  margin-bottom: 15px; /* Added space */
 }
 
 .footer-links {

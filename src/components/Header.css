@@ -6,6 +6,10 @@
   background-color: #fff;
   border-bottom: 1px solid #eaeaea;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: sticky; /* Added for better user experience */
+  top: 0;
+  z-index: 1000;
+  width: calc(100% - 100px); /* Adjusted for padding */
 }
 
 .header__logo img {
@@ -15,7 +19,8 @@
 .header__nav {
   display: flex;
   align-items: center;
-  gap: 30px; }
+  gap: 30px;
+}
 
 .header__nav a {
   text-decoration: none;
@@ -25,7 +30,7 @@
 }
 
 .header__nav a:hover {
-  color: #5a3ab3; 
+  color: #5a3ab3;
 }
 
 .header__nav a.fantasy {
@@ -44,7 +49,7 @@
 }
 
 .dropdown-btn-text {
-  margin-right: 5px; 
+  margin-right: 5px;
 }
 
 .arrow {
@@ -75,15 +80,15 @@
 }
 
 .header__cta .cta-button {
-  background-color: #2f5beA; 
+  background-color: #2f5beA;
   color: white;
   padding: 12px 25px;
-  border-radius: 25px; 
+  border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .header__cta .cta-button:hover {
-  background-color: #2546b9; 
+  background-color: #2546b9;
 }

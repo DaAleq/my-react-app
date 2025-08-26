@@ -1,87 +1,66 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 
-const Header = ({ onNavigate }) => {
+const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
-  const handleMouseLeave = () => {
-    setDropdownOpen(false);
-  };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className="header">
       <div className="header__logo">
-        <a href="/">
+        <Link to="/">
           <img
             src="https://aitschool.am/_ipx/_/icons/logo-header.svg"
             alt="AIT Logo"
           />
-        </a>
+        </Link>
       </div>
 
       <nav className="header__nav">
-        <div
-          className="dropdown"
-          onMouseEnter={toggleDropdown}
-          onMouseLeave={handleMouseLeave}
-        >
-          <div className="dropdown-toggle">
-            <a
-              href="#"
-              className="dropdown-btn-text"
-              onClick={(e) => {
-                e.preventDefault();
-                onNavigate("courses");
-              }}
-            >
-              Դասընթացներ
-            </a>
+        <div className="dropdown" ref={dropdownRef}>
+          <div className="dropdown-toggle" onClick={toggleDropdown}>
+            <span className="dropdown-btn-text">Դասընթացներ</span>
             <span className="arrow">{dropdownOpen ? "▲" : "▼"}</span>
           </div>
 
           {dropdownOpen && (
             <div className="dropdown-content">
-              <a href="#">WEB ծրագրավորում</a>
-              <a href="#">UI/UX դիզայն</a>
-              <a href="#">Գրաֆիկ դիզայն</a>
-              <a href="#">SMM</a>
-              <a href="#">AIT Kids</a>
-              <a href="#">Բոլոր դասընթացները</a>
+              <Link to="/courses#web" onClick={() => setDropdownOpen(false)}>WEB ծրագրավորում</Link>
+              <Link to="/courses#ui-ux" onClick={() => setDropdownOpen(false)}>UI/UX դիզայն</Link>
+              <Link to="/courses#graphic" onClick={() => setDropdownOpen(false)}>Գրաֆիկ դիզայն</Link>
+              <Link to="/courses#smm" onClick={() => setDropdownOpen(false)}>SMM</Link>
+              <Link to="/courses#kids" onClick={() => setDropdownOpen(false)}>AIT Kids</Link>
+              <Link to="/courses" onClick={() => setDropdownOpen(false)}>Բոլոր դասընթացները</Link>
             </div>
           )}
         </div>
 
-        <a href="#" onClick={(e) => {
-          e.preventDefault();
-          onNavigate("AboutUS");
-        }}>Մեր մասին</a>
-
-       
-        <a href="#" onClick={(e) => {
-          e.preventDefault();
-          onNavigate("shop");
-        }}>Խանութ</a>
-
-        <a href="#" onClick={(e) => {
-          e.preventDefault();
-          onNavigate("contact");
-        }}>Կապ</a>
-        <a href="#" onClick={(e) => {
-          e.preventDefault();
-          onNavigate("policy");
-        }}>Քաղաքականություն</a>
-        <a href="#" className="fantasy" onClick={(e) => {
-          e.preventDefault();
-          onNavigate("fantasy");
-        }}>Fantasy Space</a>
+        <NavLink to="/about">Մեր մասին</NavLink>
+        <NavLink to="/shop">Խանութ</NavLink>
+        <NavLink to="/contact">Կապ</NavLink>
+        <NavLink to="/privacy-policy">Քաղաքականություն</NavLink>
+        <NavLink to="/fantasy-space" className="fantasy">Fantasy Space</NavLink>
       </nav>
 
       <div className="header__cta">
-        <a href="#" className="cta-button">Դիմել հիմա</a>
+        <Link to="/contact" className="cta-button">Դիմել հիմա</Link>
       </div>
     </header>
   );

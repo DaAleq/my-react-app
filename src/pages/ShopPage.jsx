@@ -1,7 +1,6 @@
 import React from 'react';
-import './ShopTitle.css';
 
-const ShopTitle = () => {
+const ShopPage = () => {
   return (
     <div className="shop-title-container">
       <h1 className="shop-title">
@@ -11,4 +10,4 @@ const ShopTitle = () => {
   );
 };
 
-export default ShopTitle;
+export default ShopPage;

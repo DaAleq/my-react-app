@@ -1,6 +1,4 @@
-
-import Courses from "../Courses";
-
+import Courses from "../components/Courses";
 
 function CoursesPage() {
     return (
