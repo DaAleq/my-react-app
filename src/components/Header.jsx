@@ -1,8 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
+import DropdownMenu from "./DropdownMenu.jsx";
+import NavLinkItem from "./NavLinkItem.jsx";
+import MobileMenuToggle from "./MobileMenuToggle.jsx";
 import "./Header.css";
 
+
 const Header = () => {
+  
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
