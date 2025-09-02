@@ -1,4 +1,4 @@
-import "./FantasyMap.css";
+import "./Map.css";
 import MapIMG from "../assets/Map.PNG";
 
 function FantasyMap(){

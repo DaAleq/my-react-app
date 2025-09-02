@@ -16,13 +16,13 @@
 }
 
 .footer-logo {
-  max-width: 250px; /* Added for better responsiveness */
+  max-width: 250px;
 }
 
 .footer-logo img {
   width: 140px;
   height: auto;
-  margin-bottom: 15px; /* Added space */
+  margin-bottom: 15px;
 }
 
 .footer-links {
@@ -74,4 +74,109 @@
   border-top: 1px solid #333;
   margin-top: 40px;
   color: #aaa;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 992px (e.g., tablets in landscape) */
+@media (max-width: 992px) {
+  .footer-top {
+    gap: 30px; /* Reduce gap between sections */
+    justify-content: center; /* Center align items */
+    text-align: center; /* Center text within sections */
+  }
+
+  .footer-logo {
+    max-width: 100%; /* Allow logo section to take full width */
+    margin-bottom: 20px; /* Add space below logo */
+  }
+
+  .footer-links {
+    justify-content: center; /* Center align link columns */
+    gap: 40px; /* Adjust gap for links */
+  }
+
+  .footer-section {
+    min-width: unset; /* Remove min-width for more flexibility */
+    width: 45%; /* Allow two columns on wider tablets */
+  }
+
+  .footer-section h4 {
+    border-bottom: none; /* Remove border for a cleaner look */
+    padding-bottom: 0;
+    margin-bottom: 10px; /* Adjust margin */
+  }
+}
+
+/* For screens smaller than 768px (e.g., tablets and mobile devices) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px; /* Reduce padding */
+  }
+
+  .footer-top {
+    flex-direction: column; /* Stack all sections vertically */
+    align-items: center; /* Center items when stacked */
+    gap: 30px;
+  }
+
+  .footer-logo img {
+    width: 120px; /* Smaller logo */
+    margin-bottom: 10px;
+  }
+
+  .footer-links {
+    flex-direction: column; /* Stack link columns vertically */
+    align-items: center; /* Center link columns */
+    gap: 25px;
+  }
+
+  .footer-section {
+    width: 100%; /* Each section takes full width */
+    max-width: 250px; /* Limit width for better readability */
+    text-align: center; /* Center text */
+  }
+
+  .footer-section h4 {
+    font-size: 17px; /* Slightly smaller heading */
+  }
+
+  .footer-section li {
+    margin-bottom: 8px; /* Reduce space between list items */
+  }
+
+  .footer-bottom {
+    padding-top: 25px;
+    margin-top: 30px;
+    font-size: 13px; /* Smaller copyright text */
+  }
+}
+
+/* For screens smaller than 480px (e.g., mobile devices) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 25px 10px;
+  }
+
+  .footer-top {
+    gap: 25px;
+  }
+
+  .footer-logo img {
+    width: 100px; /* Even smaller logo */
+  }
+
+  .footer-links {
+    gap: 20px;
+  }
+
+  .footer-section h4 {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    padding-top: 20px;
+    margin-top: 25px;
+    font-size: 12px;
+  }
 }

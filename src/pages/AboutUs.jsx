@@ -1,17 +1,17 @@
 import React from "react";
 
-import AboutUsComponent from "../components/AboutUsComponent";
+import AboutComponent from "../components/AboutComponent.jsx";
 import OurBuilding from "../components/OurBuilding";
-import AitTeam from "../components/AitTeam";
-import LogoSection from "../components/Logo";
+import Team from "../components/Team";
+import Logo from "../components/Logo";
 
 const AboutUS = () => {
   return (
     <>
-      <AboutUsComponent />
+      <AboutComponent />
       <OurBuilding />
-      <AitTeam />
-      <LogoSection />
+      <Team />
+      <Logo />
     </>
   );
 };

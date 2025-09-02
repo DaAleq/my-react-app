@@ -1,17 +1,17 @@
 import React from "react";
-import FantasyComponent from "../components/FantasySpaceComponent";
-import FantasyFeatures from "../components/FantasyFeatures";
-import FantasyMap from "../components/FantasyMap";
+import Component from "../components/Component";
+import Features from "../components/Features";
+import Map from "../components/Map";
 import FantasyTeam from "../components/FantasyTeam";
 
 
 const FantasySpace = () => {
   return (
     <>
-      <FantasyComponent></FantasyComponent>
-      <FantasyFeatures></FantasyFeatures>
-      <FantasyMap></FantasyMap>
-      <FantasyTeam></FantasyTeam>
+      <Component/>
+      <Features/>
+      <Map/>
+      <FantasyTeam/>
     </>
   );
 };

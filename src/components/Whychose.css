@@ -58,3 +58,102 @@
   color: #333;
   line-height: 1.5;
 }
+@media (min-width: 1200px) {
+  #text_1 h3 {
+    font-size: 36px;
+  }
+
+  #grid h2 {
+    font-size: 30px;
+  }
+
+  #grid p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .why-ait-wrapper {
+    padding: 60px 40px;
+  }
+
+  #text_1 h3 {
+    font-size: 30px;
+  }
+
+  #grid {
+    gap: 25px;
+  }
+
+  #grid > div {
+    padding: 25px 18px;
+    max-width: 280px;
+  }
+
+  #grid h2 {
+    font-size: 26px;
+  }
+
+  #grid p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-ait-wrapper {
+    padding: 40px 20px;
+  }
+
+  #text_1 h3 {
+    font-size: 26px;
+  }
+
+  #text_1 h3::after {
+    height: 4px;
+    width: 60%;
+    left: 20%;
+  }
+
+  #grid {
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  #grid > div {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  #grid h2 {
+    font-size: 24px;
+  }
+
+  #grid p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  #text_1 h3 {
+    font-size: 22px;
+  }
+
+  #text_1 h3::after {
+    height: 3px;
+    width: 50%;
+    left: 25%;
+  }
+
+  #grid h2 {
+    font-size: 20px;
+  }
+
+  #grid p {
+    font-size: 12px;
+  }
+
+  #grid > div {
+    padding: 16px;
+    border-radius: 10px;
+  }
+}

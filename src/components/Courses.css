@@ -86,3 +86,115 @@
   height: 80px;
   object-fit: contain;
 }
+@media (min-width: 1200px) {
+  .course-section {
+    padding: 100px 80px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .card {
+    height: 180px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .course-section {
+    padding: 60px 40px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .card {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .card-right img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-section {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    height: auto;
+  }
+
+  .card-right img {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+  }
+
+  .tags p {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .duration {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 22px;
+  }
+
+  .section-title::after {
+    width: 40px;
+    height: 2px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .card-right img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tags p {
+    font-size: 10px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .duration {
+    font-size: 11px;
+  }
+}

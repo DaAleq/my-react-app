@@ -1,4 +1,4 @@
-import "./AitTeam.css"
+import "./Team.css"
 import AitTeam1 from "../assets/AitTeam.PNG"
 import AitTeam2 from "../assets/AitTeam2.PNG"
 import AitTeam3 from "../assets/AitTeam3.PNG"
